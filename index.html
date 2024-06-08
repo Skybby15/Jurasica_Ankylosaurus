@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ankylosaurus</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <img src="logo-jurasica-500.png" alt="Dinosaur Icon">
+    <h1>Ankylosaurus</h1>
+</header>
+<nav>
+    <a href="#"></a>
+    <a href="#"></a>
+    <a href="#"></a>
+</nav>
+<main>
+    <div class="image-container">
+        <img src="1.jpg" alt="Balaur 1 Icon" >
+        <img src="2.jpg" alt="Balaur 2 Icon" >
+        <img src="3.png" alt="Balaur 3 Icon" >
+        <img src="4.jpg" alt="Balaur 4 Icon" >
+    </div>
+    <h2>Română</h2>
+    <button class="button" id="play-romana">
+        <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="26px">
+            <path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="#036307"></path>
+        </svg>
+    </button>
+    <p id="romana-text">Ankylosaurus, numit de Barnum Brown în 1908, este un dinozaur blindat notabil din stadiul Maastrichtian din perioada Cretacicului târziu. Fosile au fost descoperite în formațiunile Horseshoe Canyon și Scollard din America de Nord din Alberta, Canada, precum și în formațiunile Hell Creek, Kirtland, Ferris și Lance din SUA (Montana, New Mexico și Wyoming).
+
+        Clasificat în Chordata, Reptilia, Dinosauria, Ornithischia, Thyreophora, Ankylosauridae și Ankylosaurinae, Ankylosaurus include specia A. magniventris. Estimările sugerează că Ankylosaurus avea cel puțin 6,25 metri lungime, dedusă din cel mai mare craniu cunoscut, care măsoară 64 de centimetri. Lipsa unor schelete complete face ca detaliile precise să fie incerte.
+
+        Fosilele găsite includ cranii, dinți, osteoderme, vertebre, oase ale membrelor, coaste și maciucuri de coadă, oferind perspective parțiale, dar semnificative asupra acestui dinozaur erbivor, puternic blindat.
+    </p>
+
+    <h2>English</h2>
+    <button class="button" id="play-engleza">
+        <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="26px">
+            <path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="#036307"></path>
+        </svg>
+    </button>
+    <p id="engleza-text">Ankylosaurus, named by Barnum Brown in 1908, is a notable armored dinosaur from the Maastrichtian stage of the Late Cretaceous period. Fossils have been discovered in North America's Horseshoe Canyon and Scollard formations in Alberta, Canada, as well as the Hell Creek, Kirtland, Ferris, and Lance formations in the USA (Montana, New Mexico, and Wyoming).
+
+        Classified under Chordata, Reptilia, Dinosauria, Ornithischia, Thyreophora, Ankylosauridae, and Ankylosaurinae, Ankylosaurus includes the species A. magniventris. Estimates suggest Ankylosaurus was at least 6.25 meters long, inferred from the largest known skull measuring 64 centimeters. The lack of complete skeletons makes precise details uncertain.
+
+        Fossils found include skulls, teeth, osteoderms, vertebrae, limb bones, ribs, and tail clubs, offering partial but significant insights into this herbivorous, heavily armored dinosaur.
+
+    </p></main>
+    <br>
+<footer>
+    <script>
+        const romanaAudio = new Audio('Ankylosaurus_voce_romana.mp3');
+        const englezaAudio = new Audio('Ankylosaurus_voce_engleza.mp3');
+
+        const playRomana = document.getElementById('play-romana');
+        const romanaText = document.getElementById('romana-text');
+        const playEngleza = document.getElementById('play-engleza');
+        const englezaText = document.getElementById('engleza-text');
+
+        playRomana.addEventListener('click', () => {
+            if (romanaAudio.paused) {
+                romanaAudio.play();
+                playRomana.innerHTML = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="26px"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="currentColor"></path></svg>';
+            } else {
+                romanaAudio.pause();
+                playRomana.innerHTML = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="26px"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="currentColor"></path></svg> Pause';
+            }
+        });
+
+        playEngleza.addEventListener('click', () => {
+            if (englezaAudio.paused) {
+                englezaAudio.play();
+                playEngleza.innerHTML = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="26px"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="currentColor"></path></svg>';
+            } else {
+                englezaAudio.pause();
+                playEngleza.innerHTML = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="26px"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="currentColor"></path></svg> Pause';
+            }
+        });
+    </script>
+    &copy; 2024 Jurasica Adventure Park. All rights reserved.
+</footer>
+
+</body>
+</html>
